@@ -20,7 +20,7 @@ Deployment: FastAPI, Uvicorn, AWS EC2
 Others: Model Checkpointing, Data Augmentation
 
 🗃️ Dataset
-Source: Publicly available dataset containing OCT scan images of retina.
+Source: Publicly available dataset containing OCT scan images of retina
 
 Classes:
 
@@ -38,27 +38,27 @@ Format: .jpeg images labeled in separate directories per class
 
 🧪 Model Development Pipeline
 1. Data Ingestion
-Load images from four folders corresponding to each disease class.
+Loaded images from four folders, each representing a disease class
 
-Resize images to 224x224 for uniform input size.
+Resized all images to 224x224 for uniform input shape
 
 2. Data Preprocessing
 Normalization
 
-Data augmentation (rotation, flip, zoom, shift)
+Data Augmentation: Rotation, Flip, Zoom, Shift
 
-Train-test-validation split
+Splitting into train, validation, and test sets
 
 3. Model Architecture
-Built a CNN using Keras with:
+Constructed a CNN using Keras, consisting of:
 
 Convolutional + MaxPooling layers
 
 Dropout for regularization
 
-Dense layers for classification
+Fully connected dense layers
 
-Softmax output layer for multi-class prediction
+Softmax output for multi-class classification
 
 4. Training & Evaluation
 Optimizer: Adam
@@ -67,16 +67,18 @@ Loss Function: Categorical Crossentropy
 
 Metrics: Accuracy
 
-Used ModelCheckpoint callback to save the best-performing model
+Implemented ModelCheckpoint callback to save best-performing model
 
-Achieved ~88% accuracy on validation set
+Achieved ~88% validation accuracy
 
 5. Deployment
-Created a REST API using FastAPI
+Built a REST API using FastAPI
 
 Deployed the application on AWS EC2
 
-Allows users to upload an OCT image and receive a disease classification in real time
+Supports image upload and returns real-time disease classification
+
+
 ![image](https://github.com/user-attachments/assets/000709d1-2a43-4a29-8452-1857997096bb)
 ![image](https://github.com/user-attachments/assets/7fbbb7d1-924c-4f02-a28d-d225957ae813)
 
